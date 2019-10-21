@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements Serializable {
         DAOContactos dao = new DAOContactos(this);
 
         builder = new AlertDialog.Builder(this);
-        try {
+        /*try {
             dao.insert(new Contacto(0, "perronegro",
                     "perronegro@","445",new SimpleDateFormat("yyyy/MM/dd").parse("2019/03/15")));
         } catch (ParseException e) {
@@ -51,14 +51,12 @@ public class MainActivity extends AppCompatActivity implements Serializable {
                     "perroblanco@","544",new SimpleDateFormat("yyyy/MM/dd").parse("2019/03/15")));
         } catch (ParseException e) {
             e.printStackTrace();
-        }
+        }*/
         /*for (Contacto c : dao.getAll()){
              Toast.makeText(this,
                      c.usuario,
                      Toast.LENGTH_SHORT).show();
          }*/
-        dao.delete("perroblanco");
-        dao.delete("perronegro");
 
         lv =findViewById(R.id.lv);
         registerForContextMenu(lv);
