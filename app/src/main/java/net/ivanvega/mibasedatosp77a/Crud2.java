@@ -31,7 +31,7 @@ public class Crud2 extends AppCompatActivity {
         email.setText(cont.getEmail());
         tel.setText(cont.getTel());
     }
-    
+
     public void update(View view) {
         DAOContactos dao = new DAOContactos(this);
         if(dao.update(email.getText().toString(),tel.getText().toString(),usuario.getText().toString())){
